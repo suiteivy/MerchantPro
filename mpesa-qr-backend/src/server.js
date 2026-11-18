@@ -16,6 +16,7 @@ import qrPayRouter from './routes/qrPay.js';
 import menuRoutes from './routes/menu.js';
 import bookingRoutes from './routes/book.js';
 import marketingRoutes from './routes/marketing.js';
+import crmRouter from './routes/crm_integration.route.js';
 
 import { startDemoSimulator } from './config/demo-simulator.js'; // Start the demo simulator
 app.use(qrPayRouter);
@@ -61,6 +62,10 @@ app.use('/api/transactions', transactionRoutes); // Transaction routes
 app.use('/api/menu', menuRoutes);         // Menu management routes
 app.use('/api/booking', bookingRoutes);   // Booking routes
 app.use('/api/marketing', marketingRoutes); // Marketing routes
+
+// CRM integration — read-only snapshot endpoint for the Cloudora CRM.
+// The route checks its own Bearer key; do NOT wrap it in user-login middleware.
+app.use('/api/crm/v1', crmRouter);
 
 
 app.get('/', (req, res) => {
