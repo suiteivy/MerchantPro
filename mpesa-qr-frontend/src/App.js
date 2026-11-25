@@ -15,6 +15,8 @@ import PublicMenuPage from './components/PublicMenuPage';
 import LandingPage from './components/LandingPage';
 import BookConsultation from './components/BookConsultation';
 import TrialDashboard from './components/TrialDashboard';
+import PrivacyPolicy from './components/PrivacyPolicy';
+import TermsAndConditions from './components/TermsAndConditions';
 
 // Utilities
 import PrivateRoute from './utility/PrivateRoute';
@@ -61,6 +63,8 @@ const AppRoutes = () => {
       <Route path="/public/menu/:merchantId" element={<PublicMenuPage />} />
       <Route path="/book-consultation" element={<BookConsultation />} />
       <Route path="/contact-us" element={<BookConsultation />} />
+      <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+      <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
 
       {/* Protected Routes */}
       <Route element={<PrivateRoute />}>

@@ -324,7 +324,7 @@ const LandingPage = () => {
 
       {/* --- FOOTER (Same logic, slightly cleaner layout) --- */}
       <footer className="max-w-7xl mx-auto px-6 py-12 md:py-16 border-t border-zinc-200 dark:border-brand-gray/50">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-10">
 
           {/* --- LEFT SIDE: Brand & Copyright (Grouped for Proximity) --- */}
           <div className="flex flex-col items-center md:items-start gap-4">
@@ -371,6 +371,23 @@ const LandingPage = () => {
             </a>
             <a href="https://www.tiktok.com/@cloudora.limited?_r=1&_t=ZS-9AzQTNjONHN" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-xs font-black tracking-wide text-zinc-950 dark:text-white hover:text-brand-orange transition-colors">
               <Music2 className="w-4 h-4 text-brand-orange" /> TikTok: @cloudora.limited
+            </a>
+          </div>
+
+          {/* --- LEGAL --- */}
+          <div className="flex flex-col gap-4">
+            <p className="text-[10px] font-black uppercase tracking-widest text-zinc-500 dark:text-zinc-400">Legal</p>
+            <a
+              href="/privacy-policy"
+              className="text-xs font-black tracking-wide text-zinc-950 dark:text-white hover:text-brand-orange transition-colors"
+            >
+              Privacy Policy
+            </a>
+            <a
+              href="/terms-and-conditions"
+              className="text-xs font-black tracking-wide text-zinc-950 dark:text-white hover:text-brand-orange transition-colors"
+            >
+              Terms &amp; Conditions
             </a>
           </div>
 
